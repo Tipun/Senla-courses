@@ -8,6 +8,7 @@ public class task1 {
         System.out.println("Введите строку:");
         //вводим заданную строку
         String str = sc.nextLine();
+        sc.close();
         //переводим заданную строку в массив char
         char[]chArray = str.toCharArray();
         //задаем переменную для подсчета искомой суммы цифр
