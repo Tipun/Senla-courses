@@ -20,6 +20,6 @@ public class task5 {
 
         storage.doBestSet(objs);
 
-        System.out.println("Набор с максимальной ценностью - " + storage.getBestObjs());
+        System.out.println("Набор с максимальной ценностью -- " + storage.getBestObjs());
     }
 }
