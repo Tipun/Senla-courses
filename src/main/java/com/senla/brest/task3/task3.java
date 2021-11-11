@@ -35,8 +35,6 @@ public class task3 {
         }
         //сортируем массив Integer по убыванию
         Arrays.sort(nums, Collections.<Integer>reverseOrder());
-        //System.out.println(Arrays.toString(nums));
-
         //создаем массив в котором будут хранится слова предложения по убыванию количества гласных букв
         String[] wordsSort = new String[words.length];
         //создаем коллекцию и копируем в него введенное предложение
@@ -44,7 +42,7 @@ public class task3 {
         for (String s : words) {
             wordsArray.add(s);
         }
-        //System.out.println(wordsArray);
+
         int count = 0;
         for (int m = 0; m < wordsSort.length; m++) {
             two:
@@ -65,24 +63,21 @@ public class task3 {
                         count = 0;
                         //сохраняем это слово в массив отсортированых слов
                         wordsSort[m] = wordsArray.get(i);
-                        //System.out.println(Arrays.toString(wordsSort));
                         //и удаляем слово из коллекции слов
                         wordsArray.remove(i);
-                        // System.out.println(wordsArray);
                         break two;
                     }
                 }
             }
         }
-        //магия
-        //System.out.println(Arrays.toString(wordsSort));
+        //на выходе получаем отсортированный массив по количеству гласных
 
         for (int i = 0; i < wordsSort.length; i++) {
             firstVowelUpperCase(wordsSort[i]);
         }
     }
 
-
+    //делаем первую гласную заглавной и выводим количество гласных
     public static void firstVowelUpperCase(String word) {
         int numberOfVowel = -1;
         int count = 0;
