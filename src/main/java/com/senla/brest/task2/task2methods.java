@@ -13,7 +13,6 @@ public class task2methods {
     public static double imput(){
         double number = 0;
         boolean integ = true;
-
         //числа с вещественной частью в java вводятся через запятую
         do {
             integ = true;
