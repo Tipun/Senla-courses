@@ -13,20 +13,28 @@ public class task2methods {
     public static double imput(){
         double number = 0;
         boolean integ = true;
-        Scanner sc = new Scanner(System.in);
+
         //числа с вещественной частью в java вводятся через запятую
         do {
             integ = true;
             //вводим целое число
             System.out.println("Введите целое число:");
-            number = sc.nextDouble();
+            try {
+                Scanner sc = new Scanner(System.in);
+                number = sc.nextDouble();
+
             // проверка на целое число
             if (number % 1 != 0) {
                 System.out.println("Введеное число не целое, повторите ввод.");
                 integ = false;
             }
+            }catch (Exception e){
+                System.out.println("Вы ввели не число, повторите ввод");
+                integ = false;
+            }
+
         } while(integ == false);
-        sc.close();
+
         return number;
     }
 
